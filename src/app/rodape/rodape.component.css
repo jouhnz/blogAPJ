@@ -1,0 +1,36 @@
+ul.social-network{
+    list-style: none;
+    padding: 0%;
+}
+ul.social-network li{
+    display: inline;
+    margin: 0%;
+    padding: 5px;
+}
+.fa {
+    font-size: 20pt;
+    color: white;
+    padding: 10px;
+}
+
+.fa-facebook:hover{
+    color:black;
+}
+
+.fa-instagram:hover{
+    color:black;
+}
+
+.fa-twitter:hover{
+    color:black;
+}
+
+.bg {
+    background-color:#875B9A
+}
+
+.fs-16 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
