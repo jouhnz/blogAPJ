@@ -1,1 +1,9 @@
+
+<app-menu *ngIf="auth.logado()"></app-menu> 
+<!--Neste caso, quando se vai instanciar um IF no HTML pode instanciar também com 
+'auth.logado()' == true para ele retornar true or false
+Lembrar também que esse *ngIf="nomeDaFuncao()" só é possivel por estar utilizando o angular, caso contrário essa função seria inserida no JS/TS-->
+
 <router-outlet></router-outlet>
+
+<app-rodape *ngIf="auth.logado()"></app-rodape>
