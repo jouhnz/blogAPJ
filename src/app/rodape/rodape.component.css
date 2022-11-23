@@ -8,7 +8,7 @@ ul.social-network li{
     padding: 5px;
 }
 .fa {
-    font-size: 20pt;
+    font-size: 25pt;
     color: white;
     padding: 10px;
 }
@@ -29,8 +29,8 @@ ul.social-network li{
     background-color:#875B9A
 }
 
-.fs-16 {
-    font-size: 16px;
+.fs-25 {
+    font-size: 25px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
