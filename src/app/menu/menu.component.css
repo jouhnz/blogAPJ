@@ -2,7 +2,7 @@
     font-size: 25pt;
     font-weight: bold;
     color: white;
-  font-family:Arial, Helvetica, sans-serif
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .fs-25 {
@@ -23,7 +23,7 @@
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .navbar {

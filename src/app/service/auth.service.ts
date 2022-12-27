@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -24,7 +24,9 @@ return this.http.post<User>('http://localhost:8080/usuarios/cadastrar', user)
 }
 
 getByIdUser(id: number): Observable<User> {
-  return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+  return this.http.get<User>(
+    `http://localhost:8080/usuarios/${id}`
+  );
 }
 
 logado (){
@@ -36,5 +38,16 @@ if (environment.token != ''){
 
   return ok
 }
+
+
+token = {
+  headers: new HttpHeaders().set('Authorization', environment.token),
+};
+refreshToken() {
+  this.token = {
+    headers: new HttpHeaders().set('Authorization', environment.token),
+  };
+}
+
 
 }

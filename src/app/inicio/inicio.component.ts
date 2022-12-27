@@ -34,7 +34,7 @@ export class InicioComponent implements OnInit {
   constructor(
     private router: Router,
     private postagemService: PostagemService,
-    private temaSerivce: TemaService,
+    private temaService: TemaService,
     private authService: AuthService,
   ) { }
 
@@ -44,21 +44,24 @@ export class InicioComponent implements OnInit {
    // alert('Sua seção expirou, faça login novamente)
       this.router.navigate(['/entrar']);
     }
+    this.authService.refreshToken();
+    this.getAllTemas();
+    this.getAllPostagens();
 
     this.getAllTemas();
     this.getAllPostagens();
   }
 
   getAllTemas(){
-    this.temaSerivce.getAllTema().subscribe((resp: Tema[]) => {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp;
     })
   }
 
-  findByIdTema(){
-    this.temaSerivce.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-      this.tema = resp
-    })
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp;
+    });
   }
 
   getAllPostagens() {
@@ -68,9 +71,9 @@ export class InicioComponent implements OnInit {
   }
 
   findByIdUser() {
-this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
-this.user = resp
-})
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
+      this.user = resp;
+    });
   }
 
   publicar() {
