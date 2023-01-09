@@ -41,7 +41,7 @@
     </li>
 
     <li class="nav-item" role="presentation">
-      <button (click)='findByIdUser()' class="nav-link text-purple" id="minhasPostagens-tab" data-bs-toggle="tab"
+      <button (click)='getAllByUsuarioId()' class="nav-link text-purple" id="minhasPostagens-tab" data-bs-toggle="tab"
         data-bs-target="#minhasPostagens" type="button" role="tab" aria-controls="minhasPostagens"
         aria-selected="false">Minhas postagens</button>
     </li>
@@ -83,7 +83,7 @@
     
     <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
       <div class="card-columns">
-        <div class="card text-center " *ngFor='let item of user.postagens'>
+        <div class="card text-center " *ngFor='let item of listaMinhasPostagens '>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
@@ -91,6 +91,8 @@
             <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
                 'HH.mm'}}
               </small></p>
+             <a class="text-info mr-3">Editar</a>
+             <a class="text-danger">Apagar</a>
 
           </div>
         </div>
@@ -150,7 +152,7 @@
 <!--Parte que alterei-->
 
           <div class="form-group">
-            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre
+            <label for="texto" data-bs-dismiss="modal" >Escolha um tema ou <a routerLink="/tema">cadastre
                 um novo</a>: </label>
             <select name="tema" id="tema" class="form-control" [(ngModel)]="idTema" (change)="findByIdTema()">
               <option *ngFor="let item of listaTemas" value="{{item.id}}">{{item.descricao}}</option>
