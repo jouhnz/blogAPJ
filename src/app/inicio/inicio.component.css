@@ -64,6 +64,9 @@
     display: inline-block;
   }
 
+  .editMr{
+    margin-right: 5px;
+  }
   .card-text{
     display:inline-flexbox;
     height: 50px;

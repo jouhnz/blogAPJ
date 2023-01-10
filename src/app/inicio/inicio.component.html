@@ -91,8 +91,9 @@
             <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date:
                 'HH.mm'}}
               </small></p>
-             <a class="text-info mr-3">Editar</a>
-             <a class="text-danger">Apagar</a>
+
+             <a [routerLink]="['/postagem-edit', item.id]" class="text-info editMr">Editar</a>
+             <a [routerLink]="['/postagem-delete', item.id]"  class="text-danger">Apagar</a>
 
           </div>
         </div>
