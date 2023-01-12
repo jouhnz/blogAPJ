@@ -36,10 +36,12 @@ export class UserEditComponent implements OnInit {
 
 
   confirmSenha(event: any) {
-    this.confirmSenha = event.target.value
+    console.log('confirmSenha')
+    this.confirmarSenha = event.target.value
   }
 
   tipoUser(event: any) {
+    console.log('tipoUser')
     this.user.tipo = this.tipoUsuario
   }
 
@@ -55,7 +57,7 @@ export class UserEditComponent implements OnInit {
     if (this.user.senha != this.confirmarSenha) {
       alert('As senhas não conferem.')
     } else {
-      this.authService.cadastrar(this.user).subscribe((resp: User) => {
+      this.authService.atualizar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/inicio'])
         alert('Usuário atualizado com sucesso, faça o login novamente.')
