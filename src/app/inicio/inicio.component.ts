@@ -20,18 +20,17 @@ export class InicioComponent implements OnInit {
   listaPostagens: Postagem [];
   listaMinhasPostagens: Postagem[];
   tituloPost: string;
-  nomeTema: string;
 
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema : number;
+  nomeTema: string;
 
   user: User = new User();
   idUser = environment.id;
   
   key = 'data';
   reverse = true;
-
 
   constructor(
     private router: Router,
@@ -102,5 +101,26 @@ this.postagemService
       });
   }
   
+  findByTituloPostagem() {
+    if (this.tituloPost == '') {
+      this.getAllPostagens();
+    } else {
+      this.postagemService
+        .getByTituloPostagem(this.tituloPost)
+        .subscribe((resp: Postagem[]) => {
+          this.listaPostagens = resp;
+        });
+    }
+  }
+
+findByNomeTema() {
+  if(this.nomeTema == ''){
+    this.getAllTemas()
+  } else {
+    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+}
 
 }
