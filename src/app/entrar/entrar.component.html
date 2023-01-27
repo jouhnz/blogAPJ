@@ -7,26 +7,25 @@
 <div class="row d-flex justify-content-center">
 <div class="col-md-6">
 
-<h1 class="text-center mb-3">Entrar</h1>
+    <h1 class="text-center mb-3 fs contenteditable" >Entrar</h1>
 
-
-<div class="form-group">
+<div class="form-group fs">
     <label for="usuario">Usuário</label>
     <input [(ngModel)]="userLogin.usuario" class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
 </div>
 
-<div class="form-group">
+<div class="form-group fs">
     <label for="senha">Senha</label>
     <input [(ngModel)]="userLogin.senha" class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
 </div>
 
-<div class="d-flex justify-content-center">
-    <button type="submit " class="btn btn-success mt-4"  (click)="entrar()">Entrar</button>
+<div class="d-flex justify-content-center p-1">
+    <button type="submit " class="custom-btn btn-5 mt-4"  (click)="entrar()">Entrar</button>
 </div>
 
 <hr class="mt-5 mb-5">
 
-<p class="text-center"> Não tem uma conta? <a routerLink='/cadastrar'>Cadastre-se</a></p>
+<p class="text-center fs"> Não tem uma conta? <a routerLink='/cadastrar'>Cadastre-se</a></p>
 
 
 </div>

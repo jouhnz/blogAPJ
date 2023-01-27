@@ -3,3 +3,6 @@
 html {
     scroll-behavior: smooth;
 }
+.container {
+    font-family: 'Gambetta', serif;
+}

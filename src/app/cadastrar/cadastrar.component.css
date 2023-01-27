@@ -10,3 +10,159 @@
         margin-right: 15px;
     }
     
+    .form-group{
+        padding: 0.2rem;
+      }
+      
+      label{
+        padding: 0.3rem;
+      }
+      
+      button{
+        margin: 1rem;
+        padding: 0.5rem 0.90rem;
+      
+      }
+      
+      .cancel{
+      background-color: rgba(206, 56, 30, 0.808);
+      color: rgb(0, 0, 0);
+      }
+      
+      .cadas{
+        background-color: rgba(15, 156, 137, 0.726);
+        color: rgb(20, 20, 20);
+      }
+      
+      .texto{
+        background-image:  url(https://c.tenor.com/iYfyXFtvvrIAAAAd/our-universe-galaxy.gif);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        padding-top: 20px;
+        font-size: 50px;
+        animation: filling 2s ease forwards;
+        font-weight: bold;
+      }
+      @keyframes filling {
+        from{
+          background-position: center 25%;
+        }
+        to {
+          background-position: center 50%;
+        }
+      }
+      
+      
+      .container-fluid{
+        background-color: rgba(222, 222, 222, 0.202);
+      }
+      .custom-btn {
+        width: 130px;
+        height: 40px;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+          7px 7px 20px 0px rgba(0, 0, 0, .1),
+          4px 4px 5px 0px rgba(0, 0, 0, .1);
+        outline: none;
+        font-size: 18px}
+      
+      
+      .btn-5 {
+        width: 130px;
+        height: 40px;
+        line-height: 42px;
+        padding: 0;
+        border: none;
+        background: #FFD085;
+        background: linear-gradient(0deg, #FFD085 0%, #FFD085 100%);
+      }
+      
+      .btn-5:hover {
+        color: #dc7d02;
+        background: transparent;
+        box-shadow: none;
+      }
+      
+      .btn-5:before,
+      .btn-5:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background: #FF9100;
+        box-shadow:
+          -1px -1px 5px 0px #fff,
+          7px 7px 20px 0px #0003,
+          4px 4px 5px 0px #0002;
+        transition: 400ms ease all;
+      }
+      
+      .btn-5:after {
+        right: inherit;
+        top: inherit;
+        left: 0;
+        bottom: 0;
+      }
+      
+      .btn-5:hover:before,
+      .btn-5:hover:after {
+        width: 100%;
+        transition: 800ms ease all;
+      }
+      
+      
+      
+     .btn-6 {
+        width: 130px;
+        height: 40px;
+        line-height: 42px;
+        padding: 0;
+        border: none;
+        background: #FFD899;
+        background: linear-gradient(0deg, #f07f3de7 0%, #eb423ddc 100%);
+      }
+      
+      .btn-6:hover {
+        color: #240046;
+        background: transparent;
+        box-shadow: none;
+      }
+      
+      .btn-6:before,
+      .btn-6:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background: #240046;
+        box-shadow:
+          -1px -1px 5px 0px #fff,
+          7px 7px 20px 0px #0003,
+          4px 4px 5px 0px #0002;
+        transition: 400ms ease all;
+      }
+      
+      .btn-6:after {
+        right: inherit;
+        top: inherit;
+        left: 0;
+        bottom: 0;
+      }
+      
+      .btn-6:hover:before,
+      .btn-6:hover:after {
+        width: 100%;
+        transition: 800ms ease all;
+      }

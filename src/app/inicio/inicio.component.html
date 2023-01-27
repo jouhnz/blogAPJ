@@ -98,8 +98,8 @@
         {{item.data | date: 'dd/MM/yyyy'}}
       </small></p>
 
-            <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-            <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+            <a [routerLink]="['/postagem-edit', item.id]" class="text-orange mr-3" href="">Editar</a>
+            <a [routerLink]="['/postagem-delete', item.id]" class="text-yellow" href="">Apagar</a>
 
     </div>
   </div>
@@ -114,7 +114,7 @@
     <div class="row d-flex justify-content-center mt-5 mb-5">
       <div class="col-md-4">
         <div class="form-group">
-            <input type="text"  class="form-control" id="titulo" placeholder="Pesquise por um tema 🔍" [(ngModel)]='nomeTema'
+            <input type="text"  class="form-control" id="tituloPesquisa" placeholder="Pesquise por um tema 🔍" [(ngModel)]='nomeTema'
             (keyup)="findByNomeTema()">
         </div>
       </div>
@@ -173,8 +173,9 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="custom-btn btn-5 mr-4" (click)='publicar()' data-dismiss="modal" >Publicar</button>
         <button type="button" class="custom-btn btn-6" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="custom-btn btn-5 mr-4" (click)='publicar()' data-dismiss="modal" >Publicar</button>
+      
 
       </div>
     </div>

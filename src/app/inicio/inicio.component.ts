@@ -98,7 +98,11 @@ this.postagemService
         this.alertas.showAlertSuccess('Postagem Realizada com sucesso!');
         this.postagem = new Postagem();
         this.getAllPostagens();
-      });
+      }, erro =>{
+        if(erro.status == 500) {
+          this.alertas.showAlertInfo('Verifique se você selecionou um tema ao realizar a postagem.')
+        }
+      })
   }
   
   findByTituloPostagem() {
@@ -117,7 +121,8 @@ findByNomeTema() {
   if(this.nomeTema == ''){
     this.getAllTemas()
   } else {
-    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[]) => {
+    this.temaService.getByNomeTema(this.nomeTema)
+    .subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
